@@ -4,13 +4,16 @@
     require_once '/var/www/html/PHPMailer-5.2.26/PHPMailerAutoload.php';
     // require_once '/var/www/html/PHPMailer-5.2.26/class.phpmaileroauthgoogle.php';
 
+    // $wd[] = parse_ini_file("test.ini", true);
+
     $mail = new PHPMailer();
 
     $mail->SMTPDebug = 3;
-    $mail->Host = 'smtp.gmail.com';
     $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    
     $mail->SMTPAuth = true;
-    $mail->Charset = 'utf-8';
+    $mail->Charset = 'utf-8'; // 設定郵件編碼
     $mail->Encoding = 'base64';
     $mail->Username = 's1058074@gm.pu.edu.tw';
     $mail->Password = 's1058074';
